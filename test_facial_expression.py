@@ -3,7 +3,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 
 # Load Model
-model = load_model("facial_expression_model.h5")
+model = load_model("face_expression.h5")
 
 # Define Class Labels
 class_labels = ["Angry", "Disgust", "Fear", "Happy", "Neutral", "Sad", "Surprise"]
