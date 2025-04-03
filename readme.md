@@ -1,4 +1,5 @@
 Real-Time Suspicious Activity Detection & Tracking System
+Github: https://github.com/harshitsaxenaa/TrainIt
 
 Overview:
 
@@ -88,7 +89,7 @@ Real-Time Alert System:
 
 Generate alerts when a suspicious action, object, or expression is detected.
 
-GitHub Repo link: 
+GitHub Repo link: https://github.com/harshitsaxenaa/TrainIt
 
 Installation & Setup
 Step 1: Clone the Repository
