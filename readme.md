@@ -123,10 +123,10 @@ python predict.py (for webcam based)
 
 or
 
-python predict_webcam.py (for video) #Edit the video path in the script
+python predict_video.py (for video) #Edit the video path in the script
 
 
-Expected Output:
+# Expected Output:
 
 The system will display real-time detection of humans and weapons with bounding boxes.
 
