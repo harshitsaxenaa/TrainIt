@@ -1,0 +1,4 @@
+train: ../weapon_dataset/dataset/images/train
+val: ../weapon_dataset/dataset/images/val
+nc: 2  
+names: ['knife', 'gun']  

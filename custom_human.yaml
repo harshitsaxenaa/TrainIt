@@ -1,0 +1,4 @@
+train: ../human_detection_dataset/images/train
+val: ../human_detection_dataset/images/val
+nc: 1  
+names: ['human']  
