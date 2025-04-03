@@ -59,7 +59,7 @@ while True:
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     frame_copy = frame.copy()
 
-    # 🔹 Human detection
+    # Human detection
     human_results = human_model(frame_copy)
     for result in human_results:
         for box in result.boxes:
@@ -71,7 +71,7 @@ while True:
                 cv2.putText(frame, f"Human ({confidence:.2f})", (x1, y1 - 10),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
-    # 🔹 Weapon detection
+    # Weapon detection
     weapon_results = weapon_model(frame_copy)
     for det in weapon_results.pred[0]:
         x1, y1, x2, y2, confidence, cls = det.tolist()
@@ -81,7 +81,7 @@ while True:
             cv2.putText(frame, f"{label} ({confidence:.2f})", (int(x1), int(y1) - 10),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
 
-    # 🔹 Face Detection + Expression Recognition
+    #  Face Detection + Expression Recognition
     gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray_frame, scaleFactor=1.3, minNeighbors=5, minSize=(30, 30))
 
@@ -99,7 +99,7 @@ while True:
         cv2.putText(frame, f"{expression_text}", (x, y - 10), 
                     cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 2)
 
-    # 🔹 Pose Detection using MediaPipe
+    # Pose Detection using MediaPipe
     pose_results = pose.process(frame_rgb)
     if pose_results.pose_landmarks:
         mp_drawing.draw_landmarks(frame, pose_results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
