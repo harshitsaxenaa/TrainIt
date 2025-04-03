@@ -16,19 +16,19 @@ class CustomSequential(Sequential):
 
 
 # Load YOLO models
-print("🔵 Loading YOLO models...")
+print("Loading YOLO models...")
 weapon_model = torch.hub.load("ultralytics/yolov5", "custom", path="weapon_model_best.pt", force_reload=False)  # YOLOv5 weapon detection
 human_model = YOLO("human_detection_model_best.pt") 
-print("✅ YOLO models loaded.")
+print("YOLO models loaded.")
 
 # Load Facial Expression Model
-print("🔵 Loading Facial Expression Model...")
+print("Loading Facial Expression Model...")
 with open("face_expression.json", "r") as json_file:
     loaded_model_json = json_file.read()
 expression_model = model_from_json(loaded_model_json, custom_objects={"Sequential": Sequential})
 expression_model.build(input_shape=(None, 48, 48, 1))
 expression_model.load_weights("face_expression.h5")
-print("✅ Facial Expression Model loaded.")
+print("Facial Expression Model loaded.")
 
 # Load OpenCV face detector
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
@@ -38,14 +38,14 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "-1"  # Force MediaPipe to use CPU
 import mediapipe as mp
 
 # Initialize MediaPipe Pose
-print("🔵 Initializing MediaPipe Pose...")
+print("Initializing MediaPipe Pose...")
 mp_pose = mp.solutions.pose
 mp_drawing = mp.solutions.drawing_utils
 pose = mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5)
-print("✅ MediaPipe Pose initialized.")
+print("MediaPipe Pose initialized.")
 
 # Open webcam
-print("🔵 Starting webcam...")
+print("Starting webcam...")
 cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)  # Set frame size
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
