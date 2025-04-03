@@ -76,7 +76,7 @@ Use YOLOv5 (fine tuned) for detecting humans and weapons.
 
 Pose Estimation for Activity Recognition:
 
-Use MediaPipe/OpenPose to analyze body movements and detect suspicious activities.
+Use MediaPipe to analyze body movements and detect suspicious activities.
 
 Facial Expression Recognition:
 
@@ -92,7 +92,7 @@ Generate alerts when a suspicious action, object, or expression is detected.
 
 # GitHub Repo link: https://github.com/harshitsaxenaa/TrainIt
 
-Installation & Setup
+## Installation & Setup
 Step 1: Clone the Repository
 
 git clone "https://github.com/harshitsaxenaa/TrainIt"
@@ -128,11 +128,11 @@ python predict_video.py (for video) #Edit the video path in the script
 
 # Expected Output:
 
-The system will display real-time detection of humans and weapons with bounding boxes.
+--> The system will display real-time detection of humans and weapons with bounding boxes.
 
-Weapons and suspicious objects will be highlighted.
+--> Weapons and suspicious objects will be highlighted.
 
-Anomalous activities will trigger alerts.
+--> Anomalous activities will trigger alerts.
 
-The pose of person shall be detected and displayed using pointers and markers and tracked for unusual movements.
+--> The pose of person shall be detected and displayed using pointers and markers and tracked for unusual movements.
 
