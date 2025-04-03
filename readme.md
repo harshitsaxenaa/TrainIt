@@ -110,7 +110,13 @@ venv\Scripts\activate      # On Windows
 
 Step 3: Install Dependencies
 
-To install dependencies, run:
+-->To install dependencies, run:
+
+pip install -r requirements.txt
+
+-->For yolov5: git clone https://github.com/ultralytics/yolov5.git
+
+cd yolov5
 
 pip install -r requirements.txt
 
