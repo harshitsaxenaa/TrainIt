@@ -1,70 +1,71 @@
 Real-Time Suspicious Activity Detection & Tracking System
 Github: https://github.com/harshitsaxenaa/TrainIt
 
-#Overview:
+# Overview:
 
 This project aims to develop a real-time surveillance system capable of detecting humans, weapons, suspicious activities, and facial expressions to identify possible threats. The system can be deployed in banks, CCTV surveillance, public spaces, airports, and other security-sensitive areas to enhance safety and prevent crimes.
 
-Applications:
+# Applications:
 
 1. In public places, home CCTVs, surveillance areas, buses etc. to detect ill-intentions and acts.
 2. This can be extended to be used in forests and animal reserves to detect acts like animal poaching and hunting.
 3. It also finds applications in markets, jewellery shops, etc.
 
-Features:
+# Features:
 
-Human Detection – Identifies people in video feeds using human detection and marks boundaries.
+--> Human Detection – Identifies people in video feeds using human detection and marks boundaries.
 
-Weapon Detection – Recognizes guns, knives, and other suspicious objects.
+--> Weapon Detection – Recognizes guns, knives, and other suspicious objects.
 
-Pose Estimation – Detects aggressive actions and unusual body movements like running, stealing, unusual roaming etc.
+--> Pose Estimation – Detects aggressive actions and unusual body movements like running, stealing, unusual roaming etc.
 
-Facial Expression Analysis – Classifies emotions and expressions like fear, tensed etc. to detect potential threats.
+--> Facial Expression Analysis – Classifies emotions and expressions like fear, tensed etc. to detect potential threats.
 
-Real-Time Tracking – Monitors individuals over time to track movements.
+--> Real-Time Tracking – Monitors individuals over time to track movements.
 
-Anomaly Detection – Flags suspicious behavior based on predefined patterns.
+--> Anomaly Detection – Flags suspicious behavior based on predefined patterns.
 
-Technologies Used:
+# Technologies Used:
 
-Programming Language:
+--> Programming Language:
 Python
 
-Frameworks & Libraries:
+--> Frameworks & Libraries:
 YOLOv5 (fine tuned on datasets) – Object detection (humans, weapons, objects)
 
-MediaPipe – Human pose estimation
+--> MediaPipe – Human pose estimation
 
-TensorFlow/Keras – CNN-based facial expression recognition
+--> TensorFlow/Keras – CNN-based facial expression recognition
 
-OpenCV – Video processing and real-time feed handling
+--> OpenCV – Video processing and real-time feed handling
 
-PyTorch – Model training and inference
+--> PyTorch – Model training and inference
 
-Scikit-learn – Data preprocessing and model evaluation
+--> Scikit-learn – Data preprocessing and model evaluation
 
-Hardware Requirements:
+# Hardware Requirements:
 
-CPU – Minimum Intel i5 or AMD Ryzen 5
+--> CPU – Minimum Intel i5 or AMD Ryzen 5
 
-GPU – Recommended NVIDIA GPU with CUDA support for faster inference
+--> GPU – Recommended NVIDIA GPU with CUDA support for faster inference
 
-RAM – At least 8GB (16GB recommended)
+--> RAM – At least 8GB (16GB recommended)
 
-Dataset Information:
+# Dataset Information:
 
-Object Detection (Humans & Weapons):
+1. Object Detection (Humans & Weapons):
 
-Weapon Dataset: https://www.kaggle.com/datasets/raghavnanjappan/weapon-dataset-for-yolov5, https://www.kaggle.com/code/kumariritika/framing
+1.1 Weapon Dataset: https://www.kaggle.com/datasets/raghavnanjappan/weapon-dataset-for-yolov5, https://www.kaggle.com/code/kumariritika/framing
 
-Human Detection Dataset: https://www.kaggle.com/datasets/constantinwerner/human-detection-dataset
+1.2 Human Detection Dataset: https://www.kaggle.com/datasets/constantinwerner/human-detection-dataset
 
-General Object Detection Dataset: https://www.kaggle.com/datasets/constantinwerner/human-detection-dataset
+1.3 General Object Detection Dataset: https://www.kaggle.com/datasets/constantinwerner/human-detection-dataset
 
-Facial Expression Recognition
-Face Expression Dataset: https://www.kaggle.com/datasets/jonathanoheix/face-expression-recognition-dataset
+2. Facial Expression Recognition
+   
+2.1 Face Expression Dataset: https://www.kaggle.com/datasets/jonathanoheix/face-expression-recognition-dataset
 
-System Architecture:
+# System Architecture:
 Video Feed Capture:
 
 Capture real-time video from CCTV/IP cameras using OpenCV.
@@ -89,20 +90,23 @@ Real-Time Alert System:
 
 Generate alerts when a suspicious action, object, or expression is detected.
 
-GitHub Repo link: https://github.com/harshitsaxenaa/TrainIt
+# GitHub Repo link: https://github.com/harshitsaxenaa/TrainIt
 
 Installation & Setup
 Step 1: Clone the Repository
 
-git clone <your-github-repo-link>
+git clone "https://github.com/harshitsaxenaa/TrainIt"
 
 cd TrainIt
 
 Step 2: Create a Virtual Environment
 
 python -m venv venv
+
 source venv/bin/activate   # On macOS/Linux
+
 venv\Scripts\activate      # On Windows
+
 
 Step 3: Install Dependencies
 
@@ -116,6 +120,7 @@ Execution Instructions:
 Running the System:
 
 python predict.py (for webcam based)
+
 or
 
 python predict_webcam.py (for video) #Edit the video path in the script
