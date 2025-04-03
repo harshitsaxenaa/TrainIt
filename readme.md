@@ -1,7 +1,7 @@
 Real-Time Suspicious Activity Detection & Tracking System
 Github: https://github.com/harshitsaxenaa/TrainIt
 
-Overview:
+#Overview:
 
 This project aims to develop a real-time surveillance system capable of detecting humans, weapons, suspicious activities, and facial expressions to identify possible threats. The system can be deployed in banks, CCTV surveillance, public spaces, airports, and other security-sensitive areas to enhance safety and prevent crimes.
 
