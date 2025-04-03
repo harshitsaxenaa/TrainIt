@@ -136,3 +136,7 @@ python predict_video.py (for video) #Edit the video path in the script
 
 --> The pose of person shall be detected and displayed using pointers and markers and tracked for unusual movements.
 
+# Output Example:
+
+![Output Example](output_images/img1.png)
+![Output Example](output_images/img2.png)
